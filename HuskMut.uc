@@ -21,15 +21,15 @@ function replaceAI(Pawn AIPawn, string MonsterClass)
     AIPawn.Destroy();
     SpawnClass = class<KFPawn_Monster>(DynamicLoadObject(MonsterClass, class'Class'));
     Zed = Spawn(SpawnClass,,, Loc, Rot,, false);
-    // End:0x164
+    
     if(Zed != none)
     {
         Zed.SpawnDefaultController();
-        // End:0x164
+        
         if(KFAIController(Zed.Controller) != none)
         {
             KFAIController(Zed.Controller).SetTeam(1);
         }
     }
-    //return;    
+    
 }
